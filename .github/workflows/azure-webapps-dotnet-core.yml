@@ -37,10 +37,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@
+      - uses: actions/checkout@main
 
       - name: Set up .NET Core
-        uses: actions/setup-dotnet@main
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
