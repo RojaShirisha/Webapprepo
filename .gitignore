@@ -1,0 +1,24 @@
+.vs/
+*.suo
+*.orig
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+_ReSharper*/
+/packages/*
+*.csproj.user
+/UpgradeLog*.htm
+*.DotSettings.user
+logs/
+Application/appsettings.Development.json
+
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+
+
