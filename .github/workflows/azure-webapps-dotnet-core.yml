@@ -56,11 +56,11 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release -o ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/Webapplication26/Webapplication26.csproj
+        run: dotnet build --configuration Release **/*.csproj  -o ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/Webapplication26/bin/Release
         
 
       - name: dotnet publish
-        run: dotnet publish -c Release **/*.csproj
+        run: dotnet publish -c Release **/*.csproj  -o ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/Webapplication26/bin/Release
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
