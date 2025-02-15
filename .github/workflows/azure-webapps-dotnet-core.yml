@@ -60,7 +60,7 @@ jobs:
         
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/Webapplication26/*.csproj
+        run: dotnet publish -c Release -o ${{env.AZURE_WEBAPP_PACKAGE_PATH}}/**/*.csproj
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
